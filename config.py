@@ -35,15 +35,15 @@ API_KEY = getenv("API_KEY", "ShrutiBotsOwabDnkvuR0UD9YX2zv8") # Get This API KEY
 
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/hbbb02219-hue/Rishant-papa-ji-",
+    "https://github.com/simplesaniyaa/saniyabotmusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/hinduuop") 
-SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/hinducomunityofficial")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/abt_mwl1") 
+SUPPORT_GROUP = getenv("SUPPORT_GROUP", "https://t.me/+8xq1aIXG0qY5MmU1")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
