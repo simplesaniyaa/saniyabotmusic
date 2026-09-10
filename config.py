@@ -84,7 +84,7 @@ confirmer = {}
 
 
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://raw.githubusercontent.com/DevloperSP/MusicSp/main/.assets/sunset_mountain.jpg"
+    "START_IMG_URL", "https://anya-file-host.vercel.app/r6r4u3lhyf"
 )
 PING_IMG_URL = getenv(
     "PING_IMG_URL", "https://raw.githubusercontent.com/DevloperSP/MusicSp/main/.assets/starry_night.jpg"
