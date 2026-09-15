@@ -6,6 +6,7 @@ from pyrogram.types import Message
 
 from MusicSp import app
 from MusicSp.plugins.ChatBot.memory import get_memory, save_message
+from MusicSp.plugins.ChatBot.settings import is_ai_enabled
 
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -50,13 +51,21 @@ async def ai_chat(client_app, message: Message):
             "⚠️ AI chatbot is not configured yet."
         )
 
+    # Check whether AI chatbot is enabled
+    if not await is_ai_enabled():
+        return
+
+    # Make sure we have a user
+    if not message.from_user:
+        return
+
     user_id = message.from_user.id
 
     try:
         # Show typing status
         await message.chat.do("typing")
 
-        # Get previous conversation
+        # Get previous conversation memory
         history = await get_memory(user_id, limit=10)
 
         # Add current user message
@@ -86,14 +95,14 @@ async def ai_chat(client_app, message: Message):
             message.text,
         )
 
-        # Save AI reply
+        # Save AI response
         await save_message(
             user_id,
             "assistant",
             answer,
         )
 
-        # Send reply
+        # Send AI response
         await message.reply_text(answer)
 
     except Exception as e:
