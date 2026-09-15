@@ -10,7 +10,7 @@ from MusicSp import app
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
 # AI model
-OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5-mini")
+OPENAI_MODEL = os.getenv("OPENAI_MODEL", "gpt-5.6-luna")
 
 # OpenAI client
 client = AsyncOpenAI(api_key=OPENAI_API_KEY) if OPENAI_API_KEY else None
