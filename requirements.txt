@@ -43,3 +43,4 @@ youtube-search-python
 httpx[http2]
 py-yt-search
 
+openai
